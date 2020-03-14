@@ -1,8 +1,8 @@
 const fs = require('fs');
 const parser = require('./parser');
 
-module.exports = async function convert(params) {
-    const { input, inputData, output } = params;
+module.exports = async function convert(options) {
+    const { input, inputData, output } = options;
 
     if (!input && !inputData) {
         throw Error(`Both 'input' and 'inputData' are empty`);
