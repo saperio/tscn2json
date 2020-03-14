@@ -3,10 +3,21 @@
   "version": "1.0.0",
   "description": "Convert Godot tscn files to json",
   "main": "src/index.js",
-  "keywords": ["godot", "tscn", "parser"],
+  "keywords": [
+    "godot",
+    "tscn",
+    "parser",
+    "cli"
+  ],
   "author": {
     "name": "SAPer",
     "email": "gsaper@gmail.com"
   },
-  "license": "MIT"
+  "scripts": {
+    "generate-parser": "pegjs -o src/parser.js grammar/tscn.pegjs"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "pegjs": "^0.10.0"
+  }
 }
