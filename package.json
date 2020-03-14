@@ -13,6 +13,9 @@
     "name": "SAPer",
     "email": "gsaper@gmail.com"
   },
+  "bin": {
+    "tscn2json": "bin/tscn2json"
+  },
   "scripts": {
     "generate-parser": "pegjs -o src/parser.js grammar/tscn.pegjs"
   },
