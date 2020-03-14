@@ -13,9 +13,18 @@
     "name": "SAPer",
     "email": "gsaper@gmail.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saperio/tscn2json.git"
+  },
+  "homepage": "https://github.com/saperio/tscn2json",
   "bin": {
     "tscn2json": "bin/tscn2json"
   },
+  "files": [
+    "bin/**",
+    "src/**"
+  ],
   "scripts": {
     "generate-parser": "pegjs -o src/parser.js grammar/tscn.pegjs"
   },
