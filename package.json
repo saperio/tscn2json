@@ -1,7 +1,7 @@
 {
   "name": "tscn2json",
   "version": "1.0.0",
-  "description": "Convert Godot tscn files to json",
+  "description": "Tool to convert Godot tscn files to json",
   "main": "src/index.js",
   "keywords": [
     "godot",
