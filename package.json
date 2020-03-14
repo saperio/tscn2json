@@ -1,0 +1,12 @@
+{
+  "name": "tscn2json",
+  "version": "1.0.0",
+  "description": "Convert Godot tscn files to json",
+  "main": "src/index.js",
+  "keywords": ["godot", "tscn", "parser"],
+  "author": {
+    "name": "SAPer",
+    "email": "gsaper@gmail.com"
+  },
+  "license": "MIT"
+}
