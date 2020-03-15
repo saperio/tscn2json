@@ -1,4 +1,4 @@
-tscn2json - tool to convert [Godot](https://godotengine.org) .tscn files to json format, with command line and programmatic interfaces. Based on parser, generated with [PEG.js](https://pegjs.org), grammar can be found here: [grammar/tscn.pegjs](../blob/master/grammar/tscn.pegjs)
+tscn2json - tool to convert [Godot](https://godotengine.org) .tscn files to json format, with command line and programmatic interfaces. Based on parser, generated with [PEG.js](https://pegjs.org), grammar can be found here: [grammar/tscn.pegjs](grammar/tscn.pegjs)
 ## Installation
 To use the tscn2json command, install globally:
 
@@ -11,7 +11,9 @@ To use the JavaScript API, install locally:
 ## Command Line usage
 Usage is simple: `tscn2json input [output]`
 
-`input` - input tscn file, `output` - output json file, if omitted, result will be printed to `stdout`. Example: ```tscn2json scene.tscn parsed-scene.json```
+`input` - input tscn file, `output` - output json file, if omitted, result will be printed to `stdout`.
+
+Example: ```tscn2json scene.tscn parsed-scene.json```
 ## Programmatic usage
 It's pretty easy to use it. `tscn2json` module exports one async function, you just have to include it and call with `options` object:
 ```javascript
@@ -31,5 +33,5 @@ Options can be
 
 Here example with return json data:
 ```javascript
-const res = await convert({ input: 'scene.tscn' }});
+const res = await convert({ input: 'scene.tscn' });
 ```
