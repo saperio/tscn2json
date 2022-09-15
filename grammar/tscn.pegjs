@@ -62,6 +62,9 @@ value_list
 // JSON
 begin_json    = ws "{" ws
 end_json      = ws "}" ws
+json_name
+  = string
+  / number
 json_name_separator  = ws ":" ws
 json_value_separator = ws "," ws
 json
@@ -81,7 +84,7 @@ json
     { return members !== null ? members: {}; }
 
 json_member
-  = name:string json_name_separator value:value {
+  = name:json_name json_name_separator value:value {
       return { name: name, value: value };
     }
 
