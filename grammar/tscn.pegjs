@@ -45,6 +45,7 @@ value
   / string
   / internal
   / array
+  / json
 
 // Array
 array
@@ -57,6 +58,32 @@ value_list
   = head:value
     tail:(value_separator v:value { return v; })*
     { return [head].concat(tail); }
+
+// JSON
+begin_json    = ws "{" ws
+end_json      = ws "}" ws
+json_name_separator  = ws ":" ws
+json_value_separator = ws "," ws
+json
+  = begin_json
+    members:(
+      head:json_member
+      tail:(json_value_separator m:json_member { return m; })*
+      {
+        var result = {};
+        [head].concat(tail).forEach(function(element) {
+          result[element.name] = element.value;
+        });
+        return result;
+      }
+    )?
+    end_json
+    { return members !== null ? members: {}; }
+
+json_member
+  = name:string json_name_separator value:value {
+      return { name: name, value: value };
+    }
 
 // Godot internal types: Color, ExtResource, etc.
 internal
