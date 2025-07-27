@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Tool to convert Godot tscn files to json",
   "main": "src/index.js",
+  "browser": "src/browser.js",
   "keywords": [
     "godot",
     "tscn",
